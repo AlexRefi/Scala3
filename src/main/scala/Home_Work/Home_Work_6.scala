@@ -9,7 +9,7 @@ object TryHW extends App {
     a/b
   }
 
-  val x2 = divisionTry(21,100)
+  val x2 = divisionTry(21,94)
   x2 match {
     case Failure(exception) =>
       println(exception.getMessage)
