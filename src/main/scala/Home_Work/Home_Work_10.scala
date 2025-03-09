@@ -52,15 +52,16 @@ object funcThree extends App {
 
   println(print3("Счёт ", 3, 3.55))
 
-  def carPrint(f: (String, Int, Double) => String): String => ((Int, Double) => String) = {
+  def carPrint(f: (String, Int, Double) => String): String => (Int, Double) => String = {
     (s1: String) => (i1: Int, d1: Double) => f(s1, i1, d1)
   }
 
   val z1 = "Гол  "
   val z2 = 6
   val z3 = 4.22
-  val z4 = carPrint(print3)(z1)
-  val z5 = z4(z2,z3)
-  println(z5)
+  val z4 = carPrint(print3)
+  val z5 = z4(z1)
+  val z6 = z5(z2,z3)
+  println(z6)
 }
 
