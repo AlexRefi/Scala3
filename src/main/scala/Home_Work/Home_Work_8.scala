@@ -61,20 +61,6 @@ object Set5 extends App {
   println(setUm(x1))
 }
 
-object Set6 extends App {
-  val x1: Map[String, Option[Int]] = Map("1" -> Option(4), "2" -> Option(5), "3" -> Option(6))
-
-  def setUm(x1:Map[String, Option[Int]]): Map[String, Option[Int]] = {
-    x1.map { n =>
-      val n1 = n._1 + "1"
-      val n2 = n._2.map(_ + 1)
-      n1 -> n2
-    }
-  }
-
-  println(setUm(x1))
-}
-
 object Set7 extends App {
   val x1: Map[String, Option[Int]] = Map("1" -> Option(4), "2" -> Option(5), "3" -> Option(-1), "4" -> Option(7))
 
