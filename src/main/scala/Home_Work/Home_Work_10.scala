@@ -64,4 +64,3 @@ object funcThree extends App {
   val z6 = z5(z2,z3)
   println(z6)
 }
-
